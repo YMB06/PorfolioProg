@@ -1,0 +1,31 @@
+/*
+Porfolio Web
+Youssef Miftah El Baze
+Diciembre 2024
+*/
+
+    .navbar {
+        background-color: #0056b3 !important;
+    }
+    .navbar-brand, .nav-link {
+        color: white !important;
+    }
+    .nav-link:hover {
+        color: #a3d5ff !important;
+    }
+    .navbar-toggler {
+        border-color: white;
+    }
+    .fixed-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #0056b3;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+    .fixed-button:hover {
+        background-color: #003f7f;
+    }

@@ -1,0 +1,91 @@
+<!-- layout:decorate se pone en la plantilla hija que hereda de base-->
+<html xmls:th="http://www.thymeleaf.org" 
+layout:decorate="www/layout/base"
+lang="es-ES">
+
+
+<section layout:fragment="MainBase">
+PROOOOOOOOOOOOOODUCOTS DEL SITIO
+<table class="striped">
+    <thead>
+        <tr >
+           
+            <th>CodigoProducto</th>
+            <th>Nombre</th>
+            <th>Gama</th>
+            <th>Dimensiones</th>
+            <th>Proveedor</th>
+            <th>Descripcion</th>
+            <th>CantidadEnStock</th>
+            <th>PrecioVenta</th>
+            <th>PrecioProveedor</th>
+            <th>imagen</th>
+        </tr>
+    </thead>
+<tbody>
+    <tr th:each="productos : ${Lprod}">
+        <td th:text="${productos.CodigoProducto}"></td>
+        <td th:text="${productos.Nombre}"></td>
+        <td th:text="${productos.Gama}"></td>
+        <td th:text="${productos.Dimensiones}"></td>
+        <td th:text="${productos.Proveedor}"></td>
+        <td th:text="${productos.Descripcion}"></td>
+        <td th:text="${productos.CantidadEnStock}"></td>
+        <td th:text="${productos.PrecioVenta}"></td>
+        <td th:text="${productos.PrecioProveedor}"></td>
+        <td th:text="${productos.imagen}"></td>
+
+
+    </tr>
+</tbody>
+</table>
+<!--@Id
+    private String CodigoProducto;
+
+    @Column(nullable = false, name = "Nombre")
+    @NotEmpty
+    private String Nombre;
+
+    @Column(nullable = false, name = "Gama")
+    @NotEmpty
+
+    private String Gama;
+
+    @Column(nullable = false, name = "Dimensiones")
+    @NotEmpty
+    private String Dimensiones;
+
+    @Column(nullable = false, name = "Proveedor")
+    @NotEmpty
+    private String Proveedor;
+
+    @Column(nullable = false, name = "Descripcion")
+    @NotEmpty
+    private String Descripcion;
+
+    @Column(nullable = false, name = "CantidadEnStock")
+    @NotEmpty
+    private int CantidadEnStock;
+
+    @Column(nullable = false, name = "PrecioVenta")
+    @NotEmpty
+    private
+    double PrecioVenta;
+
+    @Column(nullable = false, name = "PrecioProveedor")
+    @NotEmpty
+    private double PrecioProveedor;
+
+    @Column(nullable = false, name = "imagen")
+    @NotEmpty
+    private String imagen;-->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        M.Sidenav.init(document.querySelectorAll('.sidenav'));
+    });
+</script>
+</section>
+
+
+<div layout:fragment="FooterBase">
+</div>

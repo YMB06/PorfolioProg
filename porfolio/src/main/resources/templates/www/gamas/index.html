@@ -1,0 +1,28 @@
+<!-- layout:decorate se pone en la plantilla hija que hereda de base-->
+<html xmls:th="http://www.thymeleaf.org" 
+layout:decorate="www/layout/base"
+lang="es-ES">
+
+
+<section layout:fragment="MainBase">
+GAAAAAAAAAAAAAAAAAAAAMAS DE LOS PRRRRRRRRRRRODUCCCCCTOS DEL SITIO
+<table class="striped">
+    <thead>
+        <tr >
+            <th>Gama</th>
+            <th>Descripcion</th>
+            <th>Imagen</th>
+        </tr>
+    </thead>
+<tbody>
+    <tr th:each="gamas : ${Lgamas}">
+        <td th:text="${gamas.Gama}"></td>
+        <td th:text="${gamas.DescripcionTexto}"></td>
+        <td th:text="${gamas.Imagen}"></td>
+    </tr>
+</tbody>
+</table>
+</section>
+
+<div layout:fragment="FooterBase">
+</div>
