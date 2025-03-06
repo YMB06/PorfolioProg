@@ -8,7 +8,7 @@ lang="es-ES">
     <link th:href="@{https://fonts.googleapis.com/icon?family=Material+Icons}" rel="stylesheet">
     <link th:href="@{/webjars/materializecss/css/materialize.min.css}" rel="stylesheet">
     <link rel="icon" href="static/images/favicon.png">
-    <link rel="stylesheet" type="text/css" href="/static/css/indexJardineria.CSS">
+    <link rel="stylesheet" type="text/css" href="/static/css/CSS_General.CSS">
 
 
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,50 +17,115 @@ lang="es-ES">
     </head>
     <body>
 
-        <header th:replace="www/layout/components/menuEjem1 :: HeaderEj1">
+        <header th:replace="www/layout/components/Menu :: HeaderP">
           
         </header>
         
         <main>
-            <section layout:fragment="MainBase">
-   <!-- Contenido principal -->
-   <div class="container">
-    <section id="quienes-somos">
-        <h2>Quiénes Somos</h2>
-        <p>Somos una empresa dedicada a...</p>
-    </section>
-    <section id="servicios">
-        <h2>Servicios</h2>
-        <p>Ofrecemos...</p>
-    </section>
-    <section id="productos">
-        <h2>Productos</h2>
-        <p>Nuestros productos incluyen...</p>
-    </section>
-    <section id="gamas">
-        <h2>Gamas</h2>
-        <p>Contamos con diversas gamas de...</p>
-    </section>
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Puedes comunicarte con nosotros a través de...</p>
-    </section>
-</div>
-
-
-
-<!-- Inicialización del menú lateral en móvil -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        M.Sidenav.init(document.querySelectorAll('.sidenav'));
-    });
-</script>
-
+            <article class="row">
+                <aside class="col-md-4 text-center">
+                    <img id="fotoPerfil" src="/static/images/foto.jpg" alt="Foto de perfil" class="img-fluid rounded shadow" width="300" height="400">
+                </aside>
+                <aside class="col-md-8">
+                    <h3>Sobre mí:</h3>
+                    <p>Soy informático graduado en el I.E.S Cura Valera en el área de sistemas microinformáticos y redes.
+                        Me considero una persona responsable y me gusta ser puntual para cualquier cosa.
+                        También me interesa aprender más cosas constantemente para complementar mis habilidades actuales y
+                        que poco a poco tenga más conocimientos.
+                        He realizado 2 meses de prácticas en Megabit Informática.
+                    </p>
+                    <h4>Formación académica:</h4>
+                    <p>I.E.S Cura Valera 2022-2024<br>
+                        <strong>Título obtenido:</strong> Sistemas microinformáticos y redes
+                    </p>
+                    <a title="Mi curriculum" href="/ProyectoWeb_Youssefmf/Imagenes_y_videos/Curriculum_Youssefmf.pdf" id="CV" class="btn btn-primary" target="_blank">Mi CV para descargar</a>
+                    
+                    <h3 class="mt-4"><b>Cosas que he hecho previamente relacionado con páginas web:</b></h3>
+                    <ol class="list-group list-group-numbered">
+                        <li class="list-group-item">Proyecto web</li>
+                        <li class="list-group-item">Página sencilla con Wordpress</li>
+                        <li class="list-group-item">Uso básico de Docker para crear una página similar a la de Moodle Centros</li>
+                    </ol>
+                    
+                    <h3 class="mt-4"><b>Habilidades</b></h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">Conocimientos básicos HTML5 y CSS</li>
+                        <li class="list-group-item">Conocimientos básicos sobre Java</li>
+                        <li class="list-group-item">Conocimientos básicos de Wordpress y Docker</li>
+                    </ul>
+                </aside>
+            </article>
+            
+            <table id="TablaIdiomas" class="table table-striped mt-5">
+                <thead class="table-primary">
+                    <tr>
+                        <th>Idiomas</th>
+                        <th>Nivel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Español</td>
+                        <td>Nativo</td>
+                    </tr>
+                    <tr>
+                        <td>Inglés</td>
+                        <td>3.5/5</td>
+                    </tr>
+                </tbody>
+            </table>
+          
+            <h2 class="text-center">Videos que me han ayudado bastante a entender conceptos</h2>
+            <section id="displayVideos" class="d-none d-md-grid grid gap-3" style="grid-template-columns: repeat(2, 1fr);">
+                <iframe src="https://www.youtube.com/embed/xk4_1vDrzzo?si=ZLwyvxz6MMG8lGic" title="Video" class="w-100" height="250" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/lfmg-EJ8gm4?si=jVOb9eZTxGzYaNSY" title="Video" class="w-100" height="250" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/HGTJBPNC-Gw?si=tfEv620-9QJDPW4y" title="Video" class="w-100" height="250" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/5OdVJbNCSso?si=cetwVi0mT-q1iPuJ" title="Video" class="w-100" height="250" allowfullscreen></iframe>
             </section>
+            
+            <div id="videoCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <iframe src="https://www.youtube.com/embed/xk4_1vDrzzo?si=ZLwyvxz6MMG8lGic" title="Video" class="w-100" height="250" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/lfmg-EJ8gm4?si=jVOb9eZTxGzYaNSY" title="Video" class="w-100" height="250" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/HGTJBPNC-Gw?si=tfEv620-9QJDPW4y" title="Video" class="w-100" height="250" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/5OdVJbNCSso?si=cetwVi0mT-q1iPuJ" title="Video" class="w-100" height="250" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <section id="dev" class="mt-4">
+              <h5 class="text-primary">Devdocs</h5>
+              <a href="https://devdocs.io/html/" target="_blank" class="text-decoration-none">Esta página me ha ayudado bastante también</a>
+          </section>
+          
+          <section id="Contactos" class="mt-4">
+              <h3 class="text-primary">Contactos</h3>
+              <ul class="list-group">
+                  <li class="list-group-item">+34 664 70 72 83</li>
+                  <li class="list-group-item">youssefmf240@gmail.com</li>
+              </ul>
+          </section>
+          
+                  
+          <a href="./index.html" class="fixed-button">Inicio</a>
 
         </main>
 
-        <footer th:replace="www/layout/components/footer :: FooterBase">
+        <footer th:replace="www/layout/components/Footer :: FooterBase">
                 
             
         </footer>

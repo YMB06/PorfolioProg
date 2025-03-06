@@ -15,12 +15,12 @@ public class HomeController {
     // y va a interpretar el index.html
     @GetMapping("/")
     public String home(){
-        return "/www/gamas/index";
+        return "/www/site/index";
     }
     
-    @GetMapping("/i")
+    @GetMapping("/form")
     public String qSomos(){
-        return "/www/site/index";
+        return "/www/site/form";
     }
     
     @GetMapping("/Contacto")
