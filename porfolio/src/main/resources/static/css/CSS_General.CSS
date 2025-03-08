@@ -4,28 +4,29 @@ Youssef Miftah El Baze
 Diciembre 2024
 */
 
-    .navbar {
-        background-color: #0056b3 !important;
-    }
-    .navbar-brand, .nav-link {
-        color: white !important;
-    }
-    .nav-link:hover {
-        color: #a3d5ff !important;
-    }
-    .navbar-toggler {
-        border-color: white;
-    }
-    .fixed-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #0056b3;
-        color: white;
-        padding: 10px 15px;
-        border-radius: 5px;
-        text-decoration: none;
-    }
-    .fixed-button:hover {
-        background-color: #003f7f;
-    }
+.btn{
+    background-color: purple;
+color: white;
+}
+.fixed-button {
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    transition: all 2s ease;
+}
+.fixed-button:hover {
+    background-color: violet;
+    color: black;
+    transform: scale(1.06) translate(0px, 0px);
+}
+.menu, .footer {
+    background: linear-gradient(90deg, rgba(197, 51, 255, 0.8) 0%, rgba(243, 156, 255, 0.8) 100%);
+}
+body {
+    background-color: rgb(252, 220, 252);
+}
+.contenido {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}

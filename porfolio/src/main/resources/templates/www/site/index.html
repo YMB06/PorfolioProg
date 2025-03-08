@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mi Portafolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-  </head>
-<body>
+<html xmlns:th="http://www.thymeleaf.org" 
+layout:decorate="www/layout/base"
+lang="es-ES">
 
+<head  th:replace="~{/www/layout/base.html :: head}"></head>
+    <header th:replace="www/layout/components/Menu :: HeaderP">
 
-    
-<main class="container mt-5">
+    </header>
+    <main th:fragment="~{/www/layout/base.html :: content}" class="container mt-5 contenido">
   <article class="row">
       <aside class="col-md-4 text-center">
           <img id="fotoPerfil" src="/static/images/foto.jpg" alt="Foto de perfil" class="img-fluid rounded shadow" width="300" height="400">
@@ -28,7 +23,7 @@
           <p>I.E.S Cura Valera 2022-2024<br>
               <strong>Título obtenido:</strong> Sistemas microinformáticos y redes
           </p>
-          <a title="Mi curriculum" href="/ProyectoWeb_Youssefmf/Imagenes_y_videos/Curriculum_Youssefmf.pdf" id="CV" class="btn btn-primary" target="_blank">Mi CV para descargar</a>
+          <a title="Mi curriculum" href="/ProyectoWeb_Youssefmf/Imagenes_y_videos/Curriculum_Youssefmf.pdf" id="CV" class="btn indigo" target="_blank">Mi CV para descargar</a>
           
           <h3 class="mt-4"><b>Cosas que he hecho previamente relacionado con páginas web:</b></h3>
           <ol class="list-group list-group-numbered">
@@ -46,24 +41,25 @@
       </aside>
   </article>
   
-  <table id="TablaIdiomas" class="table table-striped mt-5">
-      <thead class="table-primary">
-          <tr>
-              <th>Idiomas</th>
-              <th>Nivel</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td>Español</td>
-              <td>Nativo</td>
-          </tr>
-          <tr>
-              <td>Inglés</td>
-              <td>3.5/5</td>
-          </tr>
-      </tbody>
-  </table>
+  <table id="TablaIdiomas" class="table table-striped table-hover mt-5 shadow-sm rounded">
+    <thead class="table-warning text-center">
+        <tr>
+            <th>Idiomas</th>
+            <th>Nivel</th>
+        </tr>
+    </thead>
+    <tbody class="text-center align-middle">
+        <tr>
+            <td><strong>Español</strong></td>
+            <td>Nativo</td>
+        </tr>
+        <tr>
+            <td><strong>Inglés</strong></td>
+            <td>3.5/5</td>
+        </tr>
+    </tbody>
+</table>
+
 
   <h2 class="text-center">Videos que me han ayudado bastante a entender conceptos</h2>
   <section id="displayVideos" class="d-none d-md-grid grid gap-3" style="grid-template-columns: repeat(2, 1fr);">
@@ -97,50 +93,16 @@
           <span class="visually-hidden">Next</span>
       </button>
   </div>
-  <section id="dev" class="mt-4">
-    <h5 class="text-primary">Devdocs</h5>
-    <a href="https://devdocs.io/html/" target="_blank" class="text-decoration-none">Esta página me ha ayudado bastante también</a>
+  <section id="dev" class="mt-4 p-3 border rounded shadow">
+    <h5 class="mb-3">Devdocs</h5>
+    <a href="https://devdocs.io/html/" target="_blank" 
+       class="btn text-decoration-none">
+        Esta página me ha ayudado bastante también
+    </a>
 </section>
+ 
+<a href="/" class="fixed-button btn">Inicio</a>
 
-<section id="Contactos" class="mt-4">
-    <h3 class="text-primary">Contactos</h3>
-    <ul class="list-group">
-        <li class="list-group-item">+34 664 70 72 83</li>
-        <li class="list-group-item">youssefmf240@gmail.com</li>
-    </ul>
-</section>
 </main>
+<footer th:replace="www/layout/components/Footer :: FooterBase">
 
-<h2 class="text-center text-primary">Formulario de Contacto</h2>
-        <form class="bg-light p-4 rounded shadow-sm">
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <label for="apellidos" class="form-label">Apellidos:</label>
-                <input type="text" id="apellidos" name="apellidos" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email:</label>
-                <input type="email" id="email" name="email" class="form-control" required placeholder="correo@ejemplo.com">
-            </div>
-            <div class="mb-3">
-                <label for="telefono" class="form-label">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" class="form-control" required placeholder="+34 123 45 67 89">
-            </div>
-            <div class="mb-3">
-                <label for="mensaje" class="form-label">Razones y datos de interés para contactar:</label>
-                <textarea class="form-control" placeholder="Tu mensaje" rows="4" name="mensaje"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-            <button type="reset" class="btn btn-secondary">Borrar</button>
-        </form>
-
-        
-<a href="./index.html" class="fixed-button">Inicio</a>
-</main>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
