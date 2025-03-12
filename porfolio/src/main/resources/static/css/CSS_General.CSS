@@ -25,7 +25,7 @@ transition: all 2s ease;
     transform: scale(1.06) translate(0px, 0px);
 }
 .menu, .footer {
-    background: linear-gradient(90deg, rgba(197, 51, 255, 0.8) 0%, rgba(243, 156, 255, 0.8) 100%);
+    background: linear-gradient(90deg, rgba(197, 51, 255, 0.8) 0%, rgba(230, 133, 243, 0.8) 100%);
 }
 body {
     background-color: rgb(252, 220, 252);
@@ -33,5 +33,5 @@ body {
 .contenido {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 80vh;
 }
