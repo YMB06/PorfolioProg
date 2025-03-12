@@ -7,6 +7,11 @@ Diciembre 2024
 .btn{
     background-color: purple;
 color: white;
+transition: all 2s ease;
+
+}
+.btn:hover{
+    background-color: violet;
 }
 .fixed-button {
     position: fixed;
