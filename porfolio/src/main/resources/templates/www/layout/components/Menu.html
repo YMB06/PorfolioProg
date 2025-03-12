@@ -1,14 +1,13 @@
 <header th:fragment="Menu" class="menu">
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
-          <!-- Nombre visible siempre -->
+
+
+          <!-- Nombre fijo (visible en pantallas grandes) -->
+          <a class="navbar-brand text-white" href="/">Youssef Miftah El Baze</a>
           <button class="navbar-toggler d-lg-none text-white border-0 bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              Youssef Miftah El Baze
-          </button>
-  
-          <!-- Nombre fijo para pantallas grandes -->
-          <a class="navbar-brand d-none d-lg-block text-white" href="./index.html">Youssef Miftah El Baze</a>
-  
+            <span class="navbar-toggler-icon"></span>
+        </button>
           <!-- Menú desplegable -->
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ms-auto">
@@ -20,6 +19,6 @@
           </div>
       </div>
     </nav>
-  </header>
-  
+</header>
+
   
