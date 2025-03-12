@@ -1,9 +1,8 @@
 <html xmlns:th="http://www.thymeleaf.org" 
-layout:decorate="www/layout/base"
-lang="es-ES">
+layout:decorate="www/layout/base">
 
 <head  th:replace="~{/www/layout/base.html :: head}"></head>
-    <header th:replace="www/layout/components/Menu :: HeaderP">
+    <header th:replace="~{www/layout/components/Menu :: Menu}">
 
     </header>
     <main th:fragment="~{/www/layout/base.html :: content}" class="container mt-5 contenido">
@@ -21,7 +20,7 @@ lang="es-ES">
           </p>
           <h4>Formación académica:</h4>
           <p>I.E.S Cura Valera 2022-2024<br>
-              <strong>Título obtenido:</strong> Sistemas microinformáticos y redes
+              <strong>Título obtenido:</strong> Técnico de Sistemas microinformáticos y redes
           </p>
           <a title="Mi curriculum" href="/static/Documents/Curriculum_Youssefmf.pdf" id="CV" class="btn indigo" target="_blank">Mi CV para descargar</a>
           
@@ -104,5 +103,5 @@ lang="es-ES">
 <a href="/" class="fixed-button btn">Inicio</a>
 
 </main>
-<footer th:replace="www/layout/components/Footer :: FooterBase">
+<footer th:replace="~{www/layout/components/Footer :: FooterBase}">
 
